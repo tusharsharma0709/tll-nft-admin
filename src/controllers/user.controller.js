@@ -89,9 +89,7 @@ exports.getAllUserList = async (req, res) => {
                           'breadcrumb2': 'All Users',
                           'req': req
                           };
-
-                          res.render('pages/users/userList', page_header_data);
-
+  res.render('pages/users/userList', page_header_data);
 };
 
 exports.populateAllUsers = async (req, res) => {
@@ -157,8 +155,7 @@ exports.populateAllUsers = async (req, res) => {
                                 ])
 
             });
-
-            //console.log("collectable length"+formatted_result.length);
+            //console.log(collectibles.length);
             res.json({
                                 "draw": input.draw,
                                 "recordsTotal": users.length,

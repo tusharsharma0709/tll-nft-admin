@@ -10,7 +10,6 @@ const usercontroller = require("./controllers/user.controller.js");
 const collectibles = require("./controllers/collectible.controller.js");
 const reports = require("./controllers/reports.controller.js");
 const auctions = require("./controllers/auctions.controller.js");
-const request=require('./controllers/approvalControllers')
 
 const router = Router();
 
@@ -102,11 +101,6 @@ router.post("/populateAllCollectibles", ensureAuthenticated, collectibles.popula
 router.get("/viewCollectibleOwners", ensureAuthenticated, collectibles.viewCollectibleOwners);
 router.post("/populateCollectibleOwners", ensureAuthenticated, collectibles.populateCollectibleOwners);
 
-//get all requests
-router.get("/approvallist",ensureAuthenticated,request.getAllApprovalLists);
-router.post("/populateAllList",ensureAuthenticated,request.populateAllList);
-router.post("/updateListStatus",ensureAuthenticated,request.UpdateListStatus)
-
 //get all collections
 router.get("/getAllCollections", ensureAuthenticated, collectibles.getAllCollections);
 router.post("/populateAllCollections", ensureAuthenticated, collectibles.populateAllCollections);
@@ -124,8 +118,6 @@ router.post("/updateUserStatus", ensureAuthenticated, usercontroller.updateUserS
 router.get("/getSalesReport", ensureAuthenticated, reports.getSalesReport);
 router.post("/populateAllSales", ensureAuthenticated, reports.populateAllSales);
 
-// List Route
-router.post("/populateAllSales", ensureAuthenticated, reports.populateAllSales);
 //export to excel
 router.get("/exportExcel", ensureAuthenticated, reports.exportExcel);
 

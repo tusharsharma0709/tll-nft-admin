@@ -97,7 +97,6 @@ var KTLogin = function() {
     var _handleSignUpForm = function(e) {
         var validation;
         var form = KTUtil.getById('kt_login_signup_form');
-		console.log(password)
 
         // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
         validation = FormValidation.formValidation(

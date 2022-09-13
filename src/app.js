@@ -21,11 +21,11 @@ const expressValidator = require('express-validator');
 
 const expressLogger = expressPino({ logger });
 
-const APP_PORT = process.env.APP_PORT || 8080;
+const APP_PORT = process.env.APP_PORT || 3090;
 
 const corsOptions = {
   origin: true,
-  methods: ['GET', 'POST', 'PATCH']
+  methods: ['GET', 'POST']
 };
 
 // view engine setup
@@ -61,14 +61,7 @@ app
 .use(bodyParser.json({ limit: '5mb' }))
 .use(cors(corsOptions))
 .use('/', routes);
-
-const mintRoutes = require("./routes/mintRoutes");
-app.use('/mint', mintRoutes);
-const lazymintRoutes = require("./routes/lazymintRoutes");
-app.use('/lazymint', lazymintRoutes);
-const appRoutes = require("./routes/approvalRoutes");
-app.use('/approval', appRoutes);  
-
+    
 app.get('/', (req, res) => res.status(200).send({
     message: 'Tll Backend.',
   }));
