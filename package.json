@@ -7,8 +7,7 @@
     "dev": "cross-env NODE_ENV=development node ./index.js",
     "start-staging": "cross-env NODE_ENV=development pm2 start index.js --name \"tll-backend\" --exp-backoff-restart-delay=100",
     "stop-staging": "cross-env NODE_ENV=development pm2 stop \"tll-backend\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
