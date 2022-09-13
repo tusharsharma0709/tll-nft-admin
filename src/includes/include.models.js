@@ -1,0 +1,19 @@
+const db = require("../models");
+const Collectible = db.collectibles;
+const VrsDetails = db.vrsdetails;
+const PostMintokenDetails = db.postmintokendetails;
+const SignatureData = db.signatures;
+const Collections = db.collections;
+const TokenOwnerships = db.tokenownerships;
+const TokenTransactions = db.tokentransactions;
+const User = db.users;
+const CollectibleSales = db.collectiblesales;
+const CollectibleBalance = db.collectiblebalance;
+const Nonce = db.nonce;
+const UserCollectibleFav = db.usercollectiblefav;
+const UserFollower = db.userfollowers;
+const AdminUser = db.adminusers;
+const CollectibleAuction = db.collectibleauctions;
+const CollectibleBid = db.collectiblebids;
+module.exports = { User, Collections, Collectible, TokenOwnerships, VrsDetails, PostMintokenDetails, SignatureData, TokenTransactions, CollectibleSales, CollectibleBalance, Nonce, UserCollectibleFav, UserFollower, AdminUser, CollectibleAuction,
+    CollectibleBid };
